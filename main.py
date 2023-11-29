@@ -18,10 +18,10 @@ if image is not None:
     image = Image.open(image)
     st.image(image, caption = 'Test Image')
 
-if st.button("Predict"):
-    image = Image.resize((227*227*3,1))
-    vector = np.array(image)
-    label = str(st.write(model.predict(vector))[0])
-
-    st.header("Result")
-    st.text(class_list[label])
+    if st.button("Predict"):
+        image = Image.resize((227*227*3,1))
+        vector = np.array(image)
+        label = str(st.write(model.predict(vector))[0])
+    
+        st.header("Result")
+        st.text(class_list[label])
