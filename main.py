@@ -11,7 +11,7 @@ input = open('lrc_xray.pkl', 'rb')
 model = pkl.load(input)
 
 st.header('Upload an image')
-image = st.file_uploader('Choose an image', type = (['png', 'jpg', 'jpeg'])
+image = st.file_uploader('Choose an image', type = (['png', 'jpg', 'jpeg']))
 
 if image is not None:
     image = Image.open(image)
